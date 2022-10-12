@@ -4,22 +4,35 @@ import Graph from "./components/Graph/Graph";
 import Home from "./components/Home/Home";
 import MAin from "./layout/MAin";
 import Blog from "./components/Blog/Blog";
+import Img from "./components/Img/Img";
+import Quize from "./components/Quize/Quize";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <MAin></MAin>,
+      element: (
+        <div>
+          <MAin></MAin>
+        </div>
+      ),
       children: [
         {
           path: "/home",
           loader: async () => {
             return fetch("https://openapi.programming-hero.com/api/quiz");
           },
-          element: <Home></Home>,
+          element: (
+            <div>
+              <Home></Home>
+            </div>
+          ),
         },
         {
           path: "/stat",
+          loader: async () => {
+            return fetch("https://openapi.programming-hero.com/api/quiz");
+          },
           element: <Graph></Graph>,
         },
         {
@@ -39,14 +52,16 @@ function App() {
       path: "*",
       element: <div>404</div>,
     },
-    // {
-    //   path: "/friend/:id",
-    //   loader: async ({ params }) => {
-    //     //console.log(params.id);
-    //     return fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
-    //   },
-    //   element: ,
-    // },
+    {
+      path: "/quize/:id",
+      loader: async ({ params }) => {
+        //console.log(params.id);
+        return fetch(
+          `https://openapi.programming-hero.com/api/quiz/${params.id}`
+        );
+      },
+      element: <Quize></Quize>,
+    },
   ]);
   return (
     <>

@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
-  const { logo, name, total } = props.topic;
+  const { id, logo, name, total } = props.topic;
   //console.log(logo);
   return (
     <div className="mx-auto">
       <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 ">
         <a href="#">
-          <img className="rounded-t-lg bg-cyan-800	" src={logo} alt="pic"></img>
+          <img className="rounded-t-lg bg-cyan-800" src={logo} alt="pic"></img>
         </a>
         <div className="p-5">
           <a href="#">
@@ -15,12 +16,14 @@ const Card = (props) => {
               {name}
             </h5>
           </a>
-
+          <p className="text-white">Total Question : {total}</p>
           <a
             href="#"
             className="inline-flex items-center py-2 my-5 px-3 text-sm font-medium text-center text-white bg-cyan-800	rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 bg-cyan-800	 bg-cyan-800		"
           >
-            Start Quize
+            <Link className="text-xl " to={`/quize/${id}`}>
+              See More
+            </Link>
             <svg
               aria-hidden="true"
               className="ml-2 -mr-1 w-4 h-4"
