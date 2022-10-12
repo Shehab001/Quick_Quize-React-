@@ -39,6 +39,17 @@ function App() {
           path: "/blog",
           element: <Blog></Blog>,
         },
+        {
+          path: "/quize/:id",
+          loader: async ({ params }) => {
+            //console.log(params.id);
+            return fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.id}`
+            );
+          },
+          element: <Quize></Quize>,
+        },
+
         // {
         //   path: "/fetch",
         //   loader: async () => {
@@ -51,16 +62,6 @@ function App() {
     {
       path: "*",
       element: <div>404</div>,
-    },
-    {
-      path: "/quize/:id",
-      loader: async ({ params }) => {
-        //console.log(params.id);
-        return fetch(
-          `https://openapi.programming-hero.com/api/quiz/${params.id}`
-        );
-      },
-      element: <Quize></Quize>,
     },
   ]);
   return (
