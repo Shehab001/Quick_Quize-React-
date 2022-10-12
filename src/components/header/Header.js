@@ -11,7 +11,7 @@ const Header = () => {
     <div>
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded  mx-10">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="/home" className="flex items-center">
+          <a href="/" className="flex items-center">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Black_open_book.png?20170730103318"
               className="mr-3 pt-2 h-16"
