@@ -1,12 +1,23 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Qstn = (params) => {
   //console.log(params.qstn.correctAnswer);
+  let a = params.qstn.options[0];
+  let b = params.qstn.options[1];
+  let c = params.qstn.options[2];
+  let d = params.qstn.options[3];
   const solve = (x) => {
-    alert(x);
+    if (params.qstn.correctAnswer === x) {
+      toast("Correct Answer...");
+    } else {
+      toast("Wrong Answer...");
+    }
   };
   return (
     <div>
+      <ToastContainer />
       <div className="border-2 border-teal-900	">
         <h1 className="text-2xl text-center my-5">{params.qstn.question}</h1>
         <div className="grid grid-cols-2 gap-4 p-5 	">
@@ -15,13 +26,12 @@ const Qstn = (params) => {
               type="radio"
               id="html"
               name="fav_language"
-              value="HTML"
               className="cursor-pointer"
               onClick={() => {
-                solve(1);
+                solve(a);
               }}
             ></input>
-              <label htmlFor="html">{params.qstn.options[0]}</label>
+              <label htmlFor="html">{a}</label>
             <br></br>
           </div>
           <div className="text-xl border-2 border-sky-600 bg-teal-500	cursor-pointer		p-5">
@@ -32,10 +42,10 @@ const Qstn = (params) => {
               value="HTML"
               className="cursor-pointer"
               onClick={() => {
-                solve();
+                solve(b);
               }}
             ></input>
-              <label htmlFor="html">{params.qstn.options[1]}</label>
+              <label htmlFor="html">{b}</label>
             <br></br>
           </div>
           <div className="text-xl border-2 border-sky-600 bg-teal-500	cursor-pointer		p-5">
@@ -46,10 +56,10 @@ const Qstn = (params) => {
               value="HTML"
               className="cursor-pointer"
               onClick={() => {
-                solve();
+                solve(c);
               }}
             ></input>
-              <label htmlFor="html">{params.qstn.options[2]}</label>
+              <label htmlFor="html">{c}</label>
             <br></br>
           </div>
           <div className="text-xl border-2 border-sky-600 bg-teal-500	cursor-pointer		p-5">
@@ -60,10 +70,10 @@ const Qstn = (params) => {
               value="HTML"
               className="cursor-pointer"
               onClick={() => {
-                solve();
+                solve(d);
               }}
             ></input>
-              <label htmlFor="html">{params.qstn.options[3]}</label>
+              <label htmlFor="html">{d}</label>
             <br></br>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Graph from "./components/Graph/Graph";
 import Home from "./components/Home/Home";
 import MAin from "./layout/MAin";
 import Blog from "./components/Blog/Blog";
-import Img from "./components/Img/Img";
+
 import Quize from "./components/Quize/Quize";
 
 function App() {
