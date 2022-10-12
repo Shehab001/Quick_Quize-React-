@@ -23,7 +23,7 @@ const Qstn = (params) => {
       <ToastContainer />
       <div className="border-2 border-teal-900 relative	">
         <span
-          className="absolute top-5 right-5 cursor-pointer"
+          className="absolute top-1 right-1 cursor-pointer"
           onClick={() => {
             correctAnswer();
           }}
@@ -49,7 +49,7 @@ const Qstn = (params) => {
           </svg>
         </span>
         <h1 className="text-2xl text-center my-5">{params.qstn.question}</h1>
-        <div className="grid grid-cols-2 gap-4 p-5 	">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 p-5 	">
           <div className="text-xl border-2 border-sky-600 bg-teal-500	cursor-pointer		p-5">
             <input
               type="radio"
