@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import Header from "../header/Header";
+
 import Qstn from "../Qstn/Qstn";
 
 const Quize = () => {

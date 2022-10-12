@@ -61,7 +61,11 @@ function App() {
     },
     {
       path: "*",
-      element: <div>404</div>,
+      element: (
+        <div className="text-4xl text-red text-center mt-10">
+          404 Not Found{" "}
+        </div>
+      ),
     },
   ]);
   return (

@@ -7,11 +7,11 @@ const Card = (props) => {
   return (
     <div className="mx-auto">
       <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 ">
-        <a href="#">
+        <a href="/home">
           <img className="rounded-t-lg bg-cyan-800" src={logo} alt="pic"></img>
         </a>
         <div className="p-5">
-          <a href="#">
+          <a href="/home">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {name}
             </h5>
