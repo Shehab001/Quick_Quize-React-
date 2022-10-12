@@ -22,7 +22,7 @@ const Card = (props) => {
             className="inline-flex items-center py-2 my-5 px-3 text-sm font-medium text-center text-white bg-cyan-800	rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 bg-cyan-800	 bg-cyan-800		"
           >
             <Link className="text-xl " to={`/quize/${id}`}>
-              See More
+              Attempt Quize
             </Link>
             <svg
               aria-hidden="true"
