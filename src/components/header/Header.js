@@ -9,15 +9,15 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 mx-10">
+      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded  mx-10">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <a href="/home" className="flex items-center">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Black_open_book.png?20170730103318"
-              className="mr-3 pt-2 sm:h-16"
+              className="mr-3 pt-2 h-16"
               alt="Logo"
             ></img>
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-black">
+            <span className="self-center text-xl font-semibold whitespace-nowrap">
               <span className="text-3xl text-green-500	">Q</span>uick
               <span className="text-3xl text-green-500	">Q</span>uize
             </span>
@@ -45,7 +45,7 @@ const Header = () => {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
               <li>
                 <NavLink
                   to="home"

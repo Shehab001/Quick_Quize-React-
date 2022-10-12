@@ -2,11 +2,13 @@ import React from "react";
 
 import { Outlet } from "react-router-dom";
 import Header from "../components/header/Header";
+import Home from "../components/Home/Home";
 
 const MAin = () => {
   return (
     <div>
       <Header></Header>
+
       <Outlet></Outlet>
     </div>
   );

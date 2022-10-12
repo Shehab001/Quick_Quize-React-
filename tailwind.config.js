@@ -5,6 +5,9 @@ module.exports = {
     extend: {},
   },
   plugins: [require("flowbite/plugin")],
+};
+
+module.exports = {
   content: [
     // ...
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",

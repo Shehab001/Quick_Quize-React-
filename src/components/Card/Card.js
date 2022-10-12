@@ -1,33 +1,26 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
+  const { logo, name, total } = props.topic;
+  //console.log(logo);
   return (
-    <div>
-      <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div className="mx-auto">
+      <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 ">
         <a href="#">
-          <img
-            className="rounded-t-lg"
-            src="https://live.staticflickr.com/65535/52413593240_e00326e727_o.png"
-            alt="pic"
-          ></img>
+          <img className="rounded-t-lg bg-cyan-800	" src={logo} alt="pic"></img>
         </a>
         <div className="p-5">
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              React
+              {name}
             </h5>
           </a>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            React is a JavaScript library developed by Facebook which, among
-            other things, was used to build Instagram.com. Its aim is to allow
-            developers to easily create fast user interfaces for websites and
-            applications alike.
-          </p>
+
           <a
             href="#"
-            className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="inline-flex items-center py-2 my-5 px-3 text-sm font-medium text-center text-white bg-cyan-800	rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 bg-cyan-800	 bg-cyan-800		"
           >
-            Read more
+            Start Quize
             <svg
               aria-hidden="true"
               className="ml-2 -mr-1 w-4 h-4"
